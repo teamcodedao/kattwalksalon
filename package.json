@@ -1,0 +1,30 @@
+{
+  "name": "kattwalksalon",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "rm -rf dist .cache && parcel build *.html --no-minify"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "tailwindcss": "^1.4.6"
+  },
+  "browserslist": [
+    "> 0.25%",
+    "not ie 11",
+    "not op_mini all"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": false,
+    "jsxBracketSameLine": true,
+    "arrowParens": "avoid",
+    "endOfLine": "auto"
+  },
+  "license": "ISC"
+}

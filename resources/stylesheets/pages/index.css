@@ -1,3 +1,32 @@
 .layout-default-content {
   background: none;
 }
+
+.lady-wrapper {
+  .welcome {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    h1 {
+      letter-spacing: 0.2em;
+    }
+    h1,
+    h4 {
+      @apply relative;
+      &:after {
+        content: '';
+        @apply absolute bottom-0;
+        width: 40px;
+        border-top: 1px solid rgba(224, 224, 224, 1);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    a {
+      background: var(--red-color);
+      &:hover {
+        @apply bg-red-800;
+      }
+    }
+  }
+}

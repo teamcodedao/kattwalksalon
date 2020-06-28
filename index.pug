@@ -4,4 +4,12 @@ block append stylesheets
   link(rel='stylesheet', href='./resources/stylesheets/pages/index.css')
 
 block content
-  div(style='height:1000px') home
+  .lady-wrapper.relative
+    img.object-cover.object-left-top.w-full(
+      src='/resources/images/ladies.webp',
+      alt='ladies'
+    )
+    .welcome.absolute.bg-white.px-4.py-6.text-center
+      h1.text-2xl.font-light.text-black.pb-3 WELCOME TO KATTWALK
+      h4.text-base.font-thin.tracking-wider.my-4.pb-3 HELPING YOU FIND AND EMBRACE #[br] YOUR INNER CELEBRITY
+      a.text-white.inline-block.px-4.py-2.uppercase(href='/') Booking with Us

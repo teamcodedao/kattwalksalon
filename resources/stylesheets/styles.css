@@ -4,18 +4,22 @@
 
 @import './reset.css';
 
+:root {
+  --red-color: rgba(139, 0, 0, 1);
+}
+
 .layout-default {
 }
 
 .layout-default-header {
-  --box-shadow: 0px 3px 0px 0px rgba(139, 0, 0, 1);
+  --box-shadow: 0px 3px 0px 0px var(--red-color);
 
   nav {
     box-shadow: var(--box-shadow);
 
     .parent-nav {
       > li {
-        @apply px-3 relative;
+        @apply px-3 relative z-40;
 
         > a {
           @apply uppercase;

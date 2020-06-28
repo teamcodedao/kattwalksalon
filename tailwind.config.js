@@ -14,6 +14,6 @@ module.exports = {
   variants: {},
   plugins: [],
   purge: {
-    content: ['./*.{html}'],
+    content: ['./**/*.{html,pug}'],
   },
 };

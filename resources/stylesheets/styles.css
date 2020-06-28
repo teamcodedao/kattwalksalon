@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import './reset.css';
+
+.layout-default {
+}
+
+.layout-default-header {
+  --box-shadow: 0px 3px 0px 0px rgba(139, 0, 0, 1);
+
+  nav {
+    box-shadow: var(--box-shadow);
+
+    .parent-nav {
+      > li {
+        @apply px-3 relative;
+
+        > a {
+          @apply uppercase;
+        }
+        ul {
+          @apply hidden bg-white absolute px-3 whitespace-no-wrap;
+          top: 39px;
+          left: 50%;
+          transform: translateX(-50%);
+          box-shadow: var(--box-shadow);
+          li {
+            @apply py-1;
+            a {
+              @apply block text-center;
+            }
+          }
+        }
+        &:before {
+          @apply absolute w-full h-full;
+          content: '';
+          top: 100%;
+        }
+        &:hover ul {
+          @apply block;
+        }
+      }
+    }
+    a {
+      @apply transition duration-150;
+      font-size: 16px;
+      &.active,
+      &:hover {
+        color: #8b0000;
+      }
+    }
+  }
+}
+
+.layout-default-content {
+  @apply bg-fixed flex-grow flex flex-col;
+  background-color: rgb(242, 215, 194);
+  background-image: url('/resources/images/background.webp');
+  background-size: auto;
+  background-position: center top;
+}
+
+.layout-default-footer {
+  @apply mt-auto rounded-sm bg-left-top bg-repeat-x py-6;
+  border: 0px solid rgba(212, 211, 211, 1);
+  background-color: rgba(255, 255, 255, 0.75);
+  background-image: url('/resources/images/footer_background.png');
+
+  .btn-submit {
+    background-color: rgba(218, 202, 193, 1);
+  }
+}

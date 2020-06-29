@@ -66,3 +66,26 @@
     }
   }
 }
+
+.contact {
+  height: 500px;
+  background: url('/resources/images/contact_bg.webp') no-repeat;
+  @apply bg-cover;
+
+  .contact-information {
+    width: 392px;
+  }
+  .address-information {
+    > section {
+      @apply flex flex-col items-center justify-center;
+      h5 {
+        & + div {
+          @apply my-4;
+        }
+        & ~ * {
+          @apply font-light;
+        }
+      }
+    }
+  }
+}

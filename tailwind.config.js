@@ -2,9 +2,6 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      maxWidth: {
-        md: '980px',
-      },
     },
     extend: {
       screens: {
@@ -17,6 +14,6 @@ module.exports = {
   variants: {},
   plugins: [],
   purge: {
-    content: ['./**/*.{html,pug}'],
+    content: ['./**/*.{html,pug,js}'],
   },
 };

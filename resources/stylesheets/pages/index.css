@@ -30,3 +30,39 @@
     }
   }
 }
+
+.our-services {
+  background: #8a0102;
+  @apply py-6 text-white;
+
+  .leading-title {
+    margin: 4rem;
+    letter-spacing: 0.3em;
+  }
+
+  .services {
+    grid-template-columns: repeat(5, 184px);
+    margin-bottom: 6rem;
+    a {
+      @apply text-center;
+    }
+    a.article {
+      @apply px-3 py-5;
+      background: #2f2e2e;
+      h4 {
+        @apply relative text-xl pb-3 mb-3;
+        &:after {
+          @apply absolute h-px bottom-0;
+          content: '';
+          border-top: 1px solid rgba(224, 224, 224, 1);
+          width: 40px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        & + div {
+          @apply text-xs font-light px-3;
+        }
+      }
+    }
+  }
+}
